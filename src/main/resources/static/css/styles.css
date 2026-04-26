@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 2vh 2vw;
+}
+
+.logo-img {
+  width: 400px;
+  height: 200px;
+}
+
+main {
+  margin: 2vh 4vw;
+}
+
+section {
+  margin: 1.5vh 0;
+}
+
+.form-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ingredient-group {
+  margin: 15px 0;
+}
+
+.container {
+  margin: 10px 5px;
+}
+
+.container input {
+  margin: 6px 0;
+}
+
+.btn-container {
+  margin: 5px;
+}
+
+.btn {
+  padding: 2px;
+}
+
+.tacos-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tacos-list-item {
+  padding: 2px;
+}
+
+.validation-error {
+  color: red;
+}

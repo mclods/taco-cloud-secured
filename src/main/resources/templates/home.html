@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <title>Taco Cloud</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Welcome to Taco Cloud</h1>
+      <img
+        th:src="@{/images/taco-cloud.png}"
+        alt="A taco floating through clouds"
+        class="logo-img"
+      />
+    </header>
+    <main>
+      <a th:href="@{/design}" class="page-link">Design a Taco</a>
+    </main>
+  </body>
+</html>
