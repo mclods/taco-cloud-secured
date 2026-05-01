@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <title>Taco Cloud</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Login</h1>
+      <img
+        th:src="@{/images/taco-cloud.png}"
+        alt="A taco floating through clouds"
+        class="logo-img"
+      />
+    </header>
+    <main>
+      <div>
+        <p>New here? Click <a th:href="@{/register}">here</a> to register.</p>
+      </div>
+      <div th:if="${param.error}">
+        <p class="validation-error">
+          Unable to login. Please check Username and Password.
+        </p>
+      </div>
+      <form method="post" th:action="@{/login}" id="loginForm">
+        <div class="container">
+          <div><label for="username">Username:</label></div>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="container">
+          <div><label for="password">Password:</label></div>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <input type="submit" value="Login" />
+      </form>
+    </main>
+  </body>
+</html>

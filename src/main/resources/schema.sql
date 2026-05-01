@@ -26,8 +26,22 @@ CREATE TABLE IF NOT EXISTS ingredient(
     type VARCHAR(20) NOT NULL
 );
 
+
 CREATE TABLE IF NOT EXISTS taco_ingredient(
     taco_id INTEGER REFERENCES taco(id) ON DELETE CASCADE,
     ingredient_id char(4) REFERENCES ingredient(id) ON DELETE CASCADE,
     PRIMARY KEY(taco_id, ingredient_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS users(
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    username VARCHAR NOT NULL,
+    password VARCHAR NOT NULL,
+    full_name VARCHAR(50) NOT NULL,
+    street VARCHAR(50) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    state VARCHAR(50) NOT NULL,
+    zip VARCHAR(10) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL
 );
