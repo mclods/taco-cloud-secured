@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <title>Taco Cloud</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Register</h1>
+      <img
+        th:src="@{/images/taco-cloud.png}"
+        alt="A taco floating through clouds"
+        class="logo-img"
+      />
+    </header>
+    <main>
+      <form
+        method="post"
+        th:action="@{/register}"
+        id="registerForm"
+        th:object="${registrationForm}"
+      >
+        <div class="container">
+          <div><label th:for="*{username}">Username:</label></div>
+          <input type="text" th:field="*{username}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{password}">Password:</label></div>
+          <input type="password" th:field="*{password}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{fullName}">Full Name:</label></div>
+          <input type="text" th:field="*{fullName}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{street}">Street:</label></div>
+          <input type="text" th:field="*{street}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{city}">City:</label></div>
+          <input type="text" th:field="*{city}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{state}">State:</label></div>
+          <input type="text" th:field="*{state}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{zip}">Zip:</label></div>
+          <input type="text" th:field="*{zip}" required />
+        </div>
+
+        <div class="container">
+          <div><label th:for="*{phoneNumber}">Phone:</label></div>
+          <input type="tel" th:field="*{phoneNumber}" required />
+        </div>
+
+        <input type="submit" value="Register" />
+      </form>
+    </main>
+  </body>
+</html>
