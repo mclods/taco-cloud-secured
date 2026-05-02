@@ -5,9 +5,7 @@ import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import java.time.LocalDateTime;
@@ -67,6 +65,10 @@ public class TacoOrder {
 
     @OneToMany(mappedBy = "tacoOrder", cascade = CascadeType.PERSIST)
     private final List<Taco> tacos = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public void addTaco(Taco taco) {
         if(taco.getCreationDate() == null) {
