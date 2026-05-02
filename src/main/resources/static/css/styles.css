@@ -6,6 +6,10 @@
 
 header {
   margin: 2vh 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-img {
@@ -58,4 +62,10 @@ section {
 
 .validation-error {
   color: red;
+}
+
+.logo-container-with-logout-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
