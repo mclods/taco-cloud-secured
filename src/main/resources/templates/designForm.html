@@ -8,21 +8,32 @@
   </head>
   <body>
     <header>
-      <h1 class="header-title">Design Your Tacos</h1>
-      <img
-        th:src="@{/images/taco-cloud.png}"
-        alt="A taco floating through clouds"
-        class="logo-img"
-      />
+      <div>
+        <h1 class="header-title">Design Your Tacos</h1>
+      </div>
+      <div class="logo-container-with-logout-btn">
+        <div>
+          <img
+            th:src="@{/images/taco-cloud.png}"
+            alt="A taco floating through clouds"
+            class="logo-img"
+          />
+        </div>
+        <div>
+          <form method="post" th:action="@{/logout}">
+            <button type="submit" class="btn">Logout</button>
+          </form>
+        </div>
+      </div>
     </header>
     <main>
-<!--        <pre th:text="${wrap}"></pre>-->
-<!--        <pre th:text="${protein}"></pre>-->
-<!--        <pre th:text="${veggies}"></pre>-->
-<!--        <pre th:text="${cheese}"></pre>-->
-<!--        <pre th:text="${sauce}"></pre>-->
-<!--        <pre th:text="${taco}"></pre>-->
-<!--        <pre th:text="${tacoOrder}"></pre>-->
+      <!--        <pre th:text="${wrap}"></pre>-->
+      <!--        <pre th:text="${protein}"></pre>-->
+      <!--        <pre th:text="${veggies}"></pre>-->
+      <!--        <pre th:text="${cheese}"></pre>-->
+      <!--        <pre th:text="${sauce}"></pre>-->
+      <!--        <pre th:text="${taco}"></pre>-->
+      <!--        <pre th:text="${tacoOrder}"></pre>-->
       <form method="post" th:object="${taco}">
         <div class="form-content">
           <div class="ingredient-group" id="wraps">
@@ -104,6 +115,11 @@
             <button type="submit" class="btn">Submit Taco</button>
           </div>
         </div>
+        <input
+          type="hidden"
+          th:name="${_csrf.parameterName}"
+          th:value="${_csrf.token}"
+        />
       </form>
     </main>
   </body>

@@ -8,12 +8,16 @@
   </head>
   <body>
     <header>
-      <h1 class="header-title">Welcome to Taco Cloud</h1>
-      <img
-        th:src="@{/images/taco-cloud.png}"
-        alt="A taco floating through clouds"
-        class="logo-img"
-      />
+      <div>
+        <h1 class="header-title">Welcome to Taco Cloud</h1>
+      </div>
+      <div>
+        <img
+          th:src="@{/images/taco-cloud.png}"
+          alt="A taco floating through clouds"
+          class="logo-img"
+        />
+      </div>
     </header>
     <main>
       <a th:href="@{/design}" class="page-link">Design a Taco</a>

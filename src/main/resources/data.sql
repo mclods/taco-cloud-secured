@@ -15,3 +15,7 @@ INSERT INTO ingredient(id, name, type) VALUES
 ('JACK', 'Monterrey Jack', 'CHEESE'),
 ('SLSA', 'Salsa', 'SAUCE'),
 ('SRCR', 'Sour Cream', 'SAUCE');
+
+
+INSERT INTO users(username, password, full_name, street, city, state, zip, phone_number) VALUES
+('admin', '$2a$12$yzu8xNUK1bJy.EakqA2SaukdMZHfLfpKLo4l2pjcfwpcpwKY6gCQK', 'admin', 'mock street', 'mock city', 'mock state', 'mock zip', 'mock phone number');
