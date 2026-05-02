@@ -45,3 +45,14 @@ CREATE TABLE IF NOT EXISTS users(
     zip VARCHAR(10) NOT NULL,
     phone_number VARCHAR(20) NOT NULL
 );
+
+
+ALTER TABLE taco_order ADD COLUMN user_id INTEGER;
+
+
+ALTER TABLE taco_order
+ADD CONSTRAINT fk_user
+FOREIGN KEY (user_id)
+REFERENCES users(id)
+ON DELETE CASCADE;
+
